@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.container {
+  width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.window__wrapper {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-left: 200px;
+  perspective: 2000px;
+  background-image: url("https://rg.ru/uploads/images/2022/12/14/29p_verh_masha2_1000_5a1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.window {
+  width: 500px;
+  height: 700px;
+  background-image: url("https://cdn.shopify.com/s/files/1/0567/3873/files/pexels-fwstudio-164005_480x480.jpg?v=1633349788");
+  transition: transform 0.5s ease-in;
+}
+.window:first-child {
+  transform-origin: left center;
+}
+.window:last-child {
+  transform-origin: right center;
+}
+.window__wrapper:hover .window:first-child {
+  transform: rotateY(-120deg);
+}
+.window__wrapper:hover .window:last-child {
+  transform: rotateY(120deg);
+}
